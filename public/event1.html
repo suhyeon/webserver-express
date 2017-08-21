@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="first">
+  <span>+</span>
+  <input type="text" id="second">
+  <span>=</span>
+  <input type="text" id="result">
+  <button id="sub">확인</button>
+  <script>
+    var first = document.getElementById('first'); //첫번째 인풋값
+    var second = document.getElementById('second'); //두번째 인풋값
+    var result = document.getElementById('result'); //세번째 인풋값
+    var button = document.getElementById('sub'); //버튼
+    button.addEventListener('click', function(e){ //버튼을 클릭하면 이벤트리스너 실행
+      if(first.value * 1 + second.value * 1 === result.value * 1){ //첫번째와 두번째를 더한 값이 세번째와 같은지
+        alert('성공'); //같다면 성공 창
+      }else{
+        alert('실패'); //다르다면 실패 창
+      }
+    })
+  </script>
+</body>
+</html>
