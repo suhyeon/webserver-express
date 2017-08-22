@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>FADE : 버튼을 누르시오</h1>
+    <button class="fadein">fade-in</button>
+    <button class="fadeout">fade-out</button>
+    <div class="square"></div>
+  </div>
+  <script type="text/javascript"src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script type="text/javascript">
+    /*const inBtn = document.getElementById('fadein');
+    const outBtn = document.getElementById('fadeout');
+    const box = document.querySelector('.square');
+
+    inBtn.addEventListener('click', () => {
+      box.className = "inBox";
+    });
+    outBtn.addEventListener('click', () => {
+      box.className = "outBox";
+    });*/
+    $(function(){
+      var fadein = $('.fadein');
+      var fadeout = $('.fadeout');
+      var box = $('.square');
+      fadein.click(function(){
+        box.fadeIn('slow');
+      });
+      fadeout.click(function(){
+        box.fadeOut('slow');
+      });
+    });
+  </script>
+</body>
+</html>
